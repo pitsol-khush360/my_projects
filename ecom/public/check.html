@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Users</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<button class="btn" data-toggle="modal" data-target="#m{$row['order_id']}">check</button>
+<tr>
+      <td>{$row['order_id']}</td>
+      <td>{$row['order_amount']}</td>
+      <td>{$row['order_transaction']}</td>
+      <td>{$row['order_currency']}</td>
+      <td>{$row['order_status']}</td>
+      <td>
+        //<a href="../../resources/templates/users/order_delete.php?id={$row['order_id']}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+      </td>
+    </tr>
+
+
+    <div class="modal fade" id="m{$row['order_id']}" role="dialog">
+        <div class="modal-dialog modal-lg">      
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Order {$row['order_id']} Report</h4>
+              </div>
+              <div class="modal-body">
+                  <table class="table-responsive table-hover table-bordered">
+                  <thead>
+                    <th>report_id</th>
+                    <th>product_id</th>
+                    <th>product_title</th>
+                    <th>product_quantity</th>
+                    <th>product_price</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{$report['report_id']}</td>
+                      <td>{$report['product_id']}</td>
+                      <td>{$report['product_title']}</td>
+                      <td>{$report['product_quantity']}</td>
+                      <td>{$report['product_price']}</td>
+                    </tr>
+                  </tbody>
+                  </table>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+      </div>
+</body>
+</html>
+
