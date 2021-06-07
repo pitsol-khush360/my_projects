@@ -1,0 +1,126 @@
+/* For Bootstrap Toggle Button */
+.toggle.ios, .toggle-on.ios, .toggle-off.ios 
+{ 
+	border-radius: 20px; 
+}
+.toggle.ios .toggle-handle 
+{ 
+	border-radius: 20px; 
+}
+
+.list-image
+{
+	height:50px;
+	width:50px;
+}
+
+.cg-scroll
+{
+	max-height:100vh; 
+	overflow-y:scroll;
+}
+
+.cg-image
+{
+	height:180px;
+	width:100%;
+}
+
+.cg-checkbox
+{
+	position:absolute;
+	top:0;
+	right:0;
+	width:25px;
+	height:25px;
+}
+
+.cg-nml-txt
+{
+	font-size:17px;
+}
+
+.showproducts
+{
+	font-size:15px;
+	padding:5px;
+}
+
+@media only screen and (max-width: 768px) 
+{
+  	.showproducts
+	{
+		font-size:10px;
+		padding:5px;
+	}
+}
+
+@media only screen and (max-width: 600px) 
+{
+  	.cg-scroll
+	{
+		max-height:100vh; 
+		overflow-y:scroll;
+	}
+
+	.cg-image
+	{
+		height:100px;
+		width:100%;
+	}
+
+	.cg-checkbox
+	{
+		position:absolute;
+		top:0;
+		right:0;
+		width:20px;
+		height:20px;
+	}
+
+	.cg-nml-txt
+	{
+		font-size:12px;
+	}
+
+	.showproducts
+	{
+		font-size:9px;
+		padding:5px;
+	}
+}
+
+@media only screen and (max-width: 300px) 
+{
+  	.cg-scroll
+	{
+		max-height:100vh; 
+		overflow-y:scroll;
+	}
+
+	.cg-image
+	{
+		height:80px;
+		width:100%;
+	}
+
+	.cg-checkbox
+	{
+		position:absolute;
+		top:0;
+		right:0;
+		width:20px;
+		height:20px;
+	}
+
+	.cg-nml-txt
+	{
+		font-size:8px;
+	}
+
+	.showproducts
+	{
+		font-size:7px;
+		padding:3px;
+	}
+}

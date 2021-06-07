@@ -59,19 +59,20 @@ function redirect($location)
 
  function getproducts()
  {
- 	if(isset($_GET['start']) && isset($_GET['end']))
- 	{
- 		$start=$_GET['start'];
- 		$end=$_GET['end'];
- 	}
- 	else
- 	{
- 		$start=0;
- 		$end=6;
- 	}
+ 	// if(isset($_GET['start']) && isset($_GET['end']))
+ 	// {
+ 	// 	$start=$_GET['start'];
+ 	// 	$end=$_GET['end'];
+ 	// }
+ 	// else
+ 	// {
+ 	// 	$start=0;
+ 	// 	$end=6;
+ 	// }
 
  	// For limit on records. $end -> no. of records. $start -> Starting index.
- 	$query=query("select * from products limit $start,$end");
+ 	// select * from products limit $start,$end
+ 	$query=query("select * from products");
  	confirm($query);
 
  	if(isset($_SESSION['user_name']))
@@ -204,18 +205,18 @@ heredoc;
  	else 
  	if($arg=="items")
  	{
- 		if(isset($_GET['start']) && isset($_GET['end']))
- 		{
- 			$start=$_GET['start'];
- 			$end=$_GET['end'];
- 		}
- 		else
- 		{
- 			$start=0;
- 			$end=6;
- 		}
-
- 		$query=query("select * from products where product_category_id=".escape_string($_GET['id'])."limit $start,$end");
+ 		// if(isset($_GET['start']) && isset($_GET['end']))
+ 		// {
+ 		// 	$start=$_GET['start'];
+ 		// 	$end=$_GET['end'];
+ 		// }
+ 		// else
+ 		// {
+ 		// 	$start=0;
+ 		// 	$end=6;
+ 		// }
+ 		// select * from products where product_category_id=".escape_string($_GET['id'])."limit $start,$end
+ 		$query=query("select * from products where product_category_id=".escape_string($_GET['id'])."");
  		confirm($query);
  		while($row=fetch_array($query))
  		{	
@@ -240,7 +241,7 @@ heredoc;
                        	<h3>{$row['product_title']} &nbsp;&nbsp;&nbsp;&nbsp; &#8377;{$row['product_price']}</h3>
                         <p>$sub</p>
                         <p>
-                            <a href="cart.php?add={$row['product_id']}" class="btn btn-primary">Buy Now!</a><a href="item.php?id={$row['product_id']}" class="btn btn-default">More Info</a>
+                            <a href="checkout.php?add={$row['product_id']}" class="btn btn-primary">Buy Now!</a><a href="item.php?id={$row['product_id']}" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -281,7 +282,7 @@ function user_login()
  		{
  			//echo "Non-admin User";
  			$_SESSION['user_name']=$username;
- 			redirect("users");
+ 			redirect("index.php");
  		}
  		else
  		if(mysqli_num_rows($query_user)==1 && $row['user_info']=='N')
@@ -961,7 +962,8 @@ function display_order_for_user()
 		confirm($query_report);
 		$report=fetch_array($query_report);
 
-		$order=<<< ORDER
+		$order="";
+		$order.=<<< ORDER
 		<tr>
 			<td><button class="btn btn-primary" data-toggle="collapse" data-target="#m{$row['order_id']}">{$row['order_id']} <span class="caret"></span></button>
 			</td>
@@ -969,12 +971,15 @@ function display_order_for_user()
 			<td>{$row['order_transaction']}</td>
 			<td>{$row['order_currency']}</td>
 			<td>{$row['payment_status']}</td>
-			<td>
-				<!--<a href="../../resources/templates/users/order_delete.php?id={$row['order_id']}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>-->
-			</td>
+			<!--<td>
+				<a href="../../resources/templates/users/order_delete.php?id={$row['order_id']}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+			</td>-->
 		</tr>
+ORDER;
 
-
+		if(mysqli_num_rows($query_report)!=0)
+		{
+		$order.=<<< ORDER
 		<div class="collapse" id="m{$row['order_id']}" style="background-color:rgb(30,40,30);color:white;">
     		<div class="row">
     			<div class="col-lg-12">
@@ -999,9 +1004,8 @@ function display_order_for_user()
       			</div>
   			</div>
   		</div>
-
-
 ORDER;
+  		}
 		echo $order;
 	}
 }

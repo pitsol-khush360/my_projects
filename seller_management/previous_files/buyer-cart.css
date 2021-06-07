@@ -1,0 +1,380 @@
+.bp-nv-img
+{
+  width:30px;
+  height:30px;
+}
+
+.bp-nv-shopping-basket
+{
+  font-size:35px;
+}
+
+.bp-nv-appname
+{
+  font-size:15px;
+  margin-top:5px;
+}
+
+.bp-nv-cartcount
+{
+  font-size:15px;
+}
+
+.bp-cart
+{
+  width:45%;
+  margin-left:5%;
+}
+
+.bp-checkoutform
+{
+  margin-right:3%;
+  margin-top:0;
+  width:45%;
+}
+
+.bp-checkoutform-col
+{
+  margin-top:10px;
+  margin-left:2%;
+  margin-right:2%;
+  width:46%;
+}
+
+#home-btn
+{
+  font-size:16px;
+}
+
+.qty-buttons
+{
+  font-size:15px;
+  padding:0px;
+}
+
+#checkout-btn
+{
+    margin-top:20px;
+    margin-bottom:5px;
+    font-size:22px;
+}
+
+h3
+{
+  font-size:25px;
+}
+
+h4
+{
+  font-size:23px;
+}
+
+.bp-nml-text
+{
+  font-size:16px;
+}
+
+.input-group .input-group-prepend span
+{
+  font-size:15px;
+  border:1px solid #595959;
+}
+
+.input-group input
+{
+  height:50px;
+  width:100%;
+  font-size:15px;
+  border:1px solid #595959;
+}
+
+.cstm-input
+{
+  height:50px;
+  width:100%;
+  font-size:15px;
+  border:1px solid #595959;
+}
+
+::placeholder
+{
+    font-size:45px;
+}
+
+input[type=radio] 
+{
+  width:13px;
+  height:13px;
+}
+
+select
+{
+  font-size:20px;
+  height:38px !important;
+  border:1px solid #595959 !important;
+}
+
+label
+{
+  font-size:16px;
+}
+
+@media only screen and (min-width: 600px) 
+{
+  .bp-nv-img
+  {
+    width:80px;
+    height:80px;
+  }
+
+  .bp-nv-shopping-basket
+  {
+    font-size:80px;
+  }
+
+  .bp-nv-appname
+  {
+    display:inline-block;
+    font-size:52px;
+    margin-top:4px;
+    margin-left:15px;
+  }
+
+  .bp-nv-cartcount
+  {
+    font-size:48px;
+    margin-right:15px;
+  }
+
+  .bp-cart
+  {
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
+  }
+
+  .bp-checkoutform
+  {
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:2.5em;
+    width:90%;
+  }
+
+  .bp-checkoutform-col
+  {
+    margin-top:12px;
+    margin-left:3%;
+    margin-right:3%;
+    width:94%;
+  }
+
+  #home-btn
+  {
+    margin-left:4%;
+    font-size:44px;
+  }
+
+  .qty-buttons
+  {
+    font-size:38px;
+    padding:18px;
+  }
+
+  #checkout-btn
+  {
+    margin-top:100px;
+    margin-bottom:100px;
+    font-size:72px;
+  }
+
+  h3
+  {
+    font-size:50px;
+  }
+
+  h4
+  {
+    font-size:48px;
+  }
+
+  .bp-nml-text
+  {
+    font-size:42px;
+  }
+
+  .input-group .input-group-prepend span
+  {
+    font-size:72px;
+    border:2px solid #595959;
+  }
+
+  .input-group input
+  {
+    height:122px;
+    width:100%;
+    font-size:50px;
+    border:2px solid #595959;
+  }
+
+  .cstm-input
+  {
+    height:122px;
+    width:100%;
+    font-size:50px;
+    border:2px solid #595959;
+  }
+  
+  ::placeholder
+  {
+    font-size:40px;
+  }
+
+  input[type=radio] 
+  {
+    width:70px;
+    height:70px;
+  }
+
+  select
+  {
+    font-size:50px;
+    height:110px !important;
+    border:2px solid #595959 !important;
+  }
+
+  label
+  {
+    font-size:40px;
+  }
+}
+
+@media only screen and (min-width: 992px) 
+{
+  .bp-nv-img
+  {
+    width:28px;
+    height:28px;
+  }
+
+  .bp-nv-shopping-basket
+  {
+    font-size:30px;
+  }
+
+  .bp-nv-appname
+  {
+    display:inline-block;
+    font-size:20px;
+    margin-top:2px;
+    margin-left:5px;
+  }
+
+  .bp-nv-cartcount
+  {
+    font-size:21px;
+    margin-right:10px;
+  }
+
+  .bp-cart
+  {
+    width:45%;
+    margin-left:5%;
+    margin-right:5px;
+  }
+
+  .bp-checkoutform
+  {
+    margin-right:3%;
+    margin-left:5px;
+    margin-top:0;
+    width:45%;
+  }
+
+  .bp-checkoutform-col
+  {
+    margin-top:0px;
+    margin-left:2%;
+    margin-right:2%;
+    width:46%;
+  }
+
+  #home-btn
+  {
+    margin-left:4%;
+    font-size:16px;
+  }
+
+  .qty-buttons
+  {
+    font-size:16px;
+    padding:4px;
+  }
+
+  #checkout-btn
+  {
+    margin-top:20px;
+    margin-bottom:5px;
+    font-size:22px;
+  }
+
+  h3
+  {
+    font-size:25px;
+  }
+
+  h4
+  {
+    font-size:23px;
+  }
+
+  .bp-nml-text
+  {
+    font-size:16px;
+  }
+
+  .input-group .input-group-prepend span
+  {
+    font-size:18px;
+    border:1px solid #595959;
+  }
+
+  .input-group input
+  {
+    height:50px;
+    width:100%;
+    font-size:15px;
+    border:1px solid #595959;
+  }
+
+  .cstm-input
+  {
+    height:50px;
+    width:100%;
+    font-size:15px;
+    border:1px solid #595959;
+  }
+  
+  ::placeholder
+  {
+    font-size:15px;
+  }
+
+  input[type=radio] 
+  {
+    width:18px;
+    height:18px;
+  }
+
+  select
+  {
+    font-size:15px;
+    height:50px !important;
+    border:1px solid #595959 !important;
+  }
+
+  label
+  {
+    font-size:15px;
+  }
+}

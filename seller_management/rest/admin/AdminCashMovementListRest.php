@@ -1,0 +1,223 @@
+<?php
+
+header("Content-Type:application/json");	// setting content as we will convert data in JSON type.
+include('../../config/config.php');
+require_once("../../config/".ENV."_config.php");
+
+require_once('../validation.php');
+
+$query="";
+
+if(isset($_REQUEST['cash_movement_id']) && $_REQUEST['cash_movement_id']!="")
+{
+	$cash_movement_id=$_REQUEST['cash_movement_id'];
+	$query="SELECT 
+				cash_movement_id,
+				order_id,
+				entry_side,
+				opening_balance,
+				amount,
+				amount_currency,
+				dr_cr_Indicator,
+				closing_balance,
+				Movement_type,
+				payment_reference,
+				movement_status,
+				movement_description,
+				settled_amount,
+				created_date_time
+			FROM 
+				cash_movements 
+			WHERE
+				cash_movement_id='".$cash_movement_id."'
+			ORDER BY
+				created_date_time
+			";
+}
+else 
+if(isset($_REQUEST['order_id']) && $_REQUEST['order_id']!="")
+{
+	$order_id=$_REQUEST['order_id'];
+	$query="SELECT 
+				cash_movement_id,
+				order_id,
+				entry_side,
+				opening_balance,
+				amount,
+				amount_currency,
+				dr_cr_Indicator,
+				closing_balance,
+				Movement_type,
+				payment_reference,
+				movement_status,
+				movement_description,
+				settled_amount,
+				created_date_time
+			FROM 
+				cash_movements 
+			WHERE
+				order_id='".$order_id."'
+			ORDER BY
+				created_date_time
+			";
+}
+else		
+if(isset($_REQUEST['entry_side'])&&$_REQUEST['entry_side']!='')
+{
+	$entry_side=$_REQUEST['entry_side'];
+	$query="SELECT 
+				cash_movement_id,
+				order_id,
+				entry_side,
+				opening_balance,
+				amount,
+				amount_currency,
+				dr_cr_Indicator,
+				closing_balance,
+				Movement_type,
+				payment_reference,
+				movement_status,
+				movement_description,
+				settled_amount,
+				created_date_time
+			FROM 
+				cash_movements 
+			WHERE
+				entry_side='".$entry_side."'
+			ORDER BY
+				created_date_time
+			";
+}
+else		
+if(isset($_REQUEST['Movement_type'])&&$_REQUEST['Movement_type']!='')
+{
+	$Movement_type=$_REQUEST['Movement_type'];
+	$query="SELECT 
+				cash_movement_id,
+				order_id,
+				entry_side,
+				opening_balance,
+				amount,
+				amount_currency,
+				dr_cr_Indicator,
+				closing_balance,
+				Movement_type,
+				payment_reference,
+				movement_status,
+				movement_description,
+				settled_amount,
+				created_date_time
+			FROM 
+				cash_movements 
+			WHERE
+				Movement_type='".$Movement_type."'
+			ORDER BY
+				created_date_time
+			";
+}
+else
+if(isset($_REQUEST['payment_reference'])&&$_REQUEST['payment_reference']!='')
+{
+	$payment_reference=$_REQUEST['payment_reference'];
+	$query="SELECT 
+				cash_movement_id,
+				order_id,
+				entry_side,
+				opening_balance,
+				amount,
+				amount_currency,
+				dr_cr_Indicator,
+				closing_balance,
+				Movement_type,
+				payment_reference,
+				movement_status,
+				movement_description,
+				settled_amount,
+				created_date_time
+			FROM 
+				cash_movements 
+			WHERE
+				payment_reference='".$payment_reference."'
+			ORDER BY
+				created_date_time
+			";
+}
+else
+if(isset($_REQUEST['movement_status'])&&$_REQUEST['movement_status']!='')
+{
+	$movement_status=$_REQUEST['movement_status'];
+	$query="SELECT 
+				cash_movement_id,
+				order_id,
+				entry_side,
+				opening_balance,
+				amount,
+				amount_currency,
+				dr_cr_Indicator,
+				closing_balance,
+				Movement_type,
+				payment_reference,
+				movement_status,
+				movement_description,
+				settled_amount,
+				created_date_time
+			FROM 
+				cash_movements 
+			WHERE
+				movement_status='".$movement_status."'
+			ORDER BY
+				created_date_time
+			";
+}
+else
+{
+	$query="SELECT 
+				cash_movement_id,
+				order_id,
+				entry_side,
+				opening_balance,
+				amount,
+				amount_currency,
+				dr_cr_Indicator,
+				closing_balance,
+				Movement_type,
+				payment_reference,
+				movement_status,
+				movement_description,
+				settled_amount,
+				created_date_time
+			FROM 
+				cash_movements 
+			ORDER BY
+				created_date_time
+			";
+}
+$query=query($query);
+confirm($query);
+$rows=mysqli_num_rows($query);
+
+if($rows!=0)	// Valid Request, Data Found.
+{
+	$temp=array();
+	while($row=fetch_array($query))
+	{
+		$temp[]=$row;
+	}
+	$temp['response_code']=200;
+	$temp['response_desc']="Success";
+	$temp['rows']=$rows;
+	//print_r($temp);
+	echo json_encode(array("getcashmovement"=>$temp));
+	close();
+	exit();
+}
+else
+{
+	$temp['response_code']=405;
+	$temp['response_desc']="No Records Found";
+	echo json_encode(array("getcashmovement"=>$temp));
+	close();
+	exit();
+}
+?>
+ 

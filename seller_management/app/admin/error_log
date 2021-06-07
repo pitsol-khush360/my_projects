@@ -1,0 +1,10 @@
+[24-Dec-2020 10:45:10 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminUserList.php on line 13
+[25-Dec-2020 22:10:55 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminBasketOrdersList.php on line 13
+[25-Dec-2020 22:31:48 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminBasketOrdersList.php on line 13
+[26-Dec-2020 09:37:31 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminBasketOrdersList.php on line 13
+[26-Dec-2020 09:39:34 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminBasketOrdersList.php on line 13
+[26-Dec-2020 09:46:13 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminBasketOrdersList.php on line 13
+[26-Dec-2020 09:49:00 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminBasketOrdersList.php on line 13
+[26-Dec-2020 19:24:26 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminDashboard.php on line 13
+[26-Dec-2020 19:24:45 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminDashboard.php on line 13
+[26-Dec-2020 19:25:04 Asia/Kolkata] PHP Notice:  Undefined index: current_user in /home/u515190832/domains/preuat.com/public_html/app/admin/displayAdminDashboard.php on line 13

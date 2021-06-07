@@ -10,5 +10,5 @@
     </div>
 </div>
 </div>
-<?php include(TEMPLATE_FRONT.DS."pagination.php"); ?>
+<?php //include(TEMPLATE_FRONT.DS."pagination.php"); ?>
 <?php include(TEMPLATE_FRONT.DS."footer.php");  ?>

@@ -1,0 +1,416 @@
+body
+{
+    font-family: 'Roboto', sans-serif;
+    /*background: #e1e7f3;*/
+    background:#F0F3F4;
+}
+
+div li, form
+{
+  background:#F0F3F4 !important;
+}
+
+.bp-nv-img
+{
+  width:30px;
+  height:30px;
+}
+
+.bp-nv-shopping-basket
+{
+  font-size:35px;
+}
+
+.bp-nv-appname
+{
+  font-size:15px;
+  margin-top:5px;
+}
+
+.bp-nv-cartcount
+{
+  font-size:15px;
+}
+
+/*.bp-cart
+{
+  width:45%;
+  margin-left:5%;
+  margin-bottom:5%;
+}*/
+
+/*.bp-checkoutform
+{
+  margin-right:3%;
+  margin-top:0;
+  width:45%;
+}*/
+
+/*.bp-checkoutform-col
+{
+  margin-top:10px;
+  margin-left:2%;
+  margin-right:2%;
+  width:46%;
+}*/
+
+#home-btn
+{
+  font-size:16px;
+}
+
+.qty-buttons
+{
+  font-size:15px;
+  padding:0px;
+}
+
+#checkout-btn
+{
+    margin-top:20px;
+    margin-bottom:5px;
+    font-size:22px;
+}
+
+h3
+{
+  font-size:25px;
+}
+
+h4
+{
+  font-size:23px;
+}
+
+.cart-list-img
+{
+  height:130px;
+  width:100%;
+  margin-top:20px;
+}
+
+.bp-nml-text
+{
+  font-size:16px;
+}
+
+.input-group .input-group-prepend span
+{
+  font-size:15px;
+  border:1px solid #595959;
+}
+
+.input-group input
+{
+  /*height:50px;
+  width:100%;*/
+  font-size:15px;
+  border:1px solid #595959;
+  background:#F0F3F4;
+}
+
+.cstm-input
+{
+  /*height:50px;
+  width:100%;*/
+  font-size:15px;
+  border:1px solid #595959;
+  background:#F0F3F4 !important;
+}
+
+::placeholder
+{
+  font-size:20px;
+}
+
+input[type=radio] 
+{
+  width:13px;
+  height:13px;
+}
+
+select
+{
+  font-size:20px;
+  height:38px !important;
+  border:1px solid #595959 !important;
+  background:#F0F3F4 !important;
+}
+
+label
+{
+  font-size:16px;
+}
+
+@media only screen and (min-width: 360px) 
+{
+  .bp-nv-img
+  {
+    width:35px;
+    height:35px;
+  }
+
+  .bp-nv-shopping-basket
+  {
+    font-size:40px;
+  }
+
+  .bp-nv-appname
+  {
+    display:inline-block;
+    font-size:20px;
+    margin-top:4px;
+    margin-left:2px;
+  }
+
+  .bp-nv-cartcount
+  {
+    font-size:25px;
+    margin-right:10px;
+  }
+
+  /*.bp-cart
+  {
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
+  }
+
+  .bp-checkoutform
+  {
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:2.5em;
+    width:90%;
+  }*/
+
+  /*.bp-checkoutform-col
+  {
+    margin-top:12px;
+    margin-left:3%;
+    margin-right:3%;
+    width:94%;
+  }*/
+
+  #home-btn
+  {
+    font-size:16px;
+  }
+
+  .qty-buttons
+  {
+    font-size:16px;
+    padding:5px;
+  }
+
+  #checkout-btn
+  {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size:20px;
+  }
+
+  h3
+  {
+    font-size:25px;
+  }
+
+  h4
+  {
+    font-size:23px;
+  }
+
+  .cart-list-img
+  {
+    height:130px;
+    width:100%;
+    margin-top:20px;
+  }
+
+  .bp-nml-text
+  {
+    font-size:18px;
+  }
+
+  .input-group .input-group-prepend span
+  {
+    font-size:18px;
+    border:2px solid #595959;
+  }
+
+  .input-group input
+  {
+    /*height:122px;
+    width:100%;*/
+    font-size:18px;
+    border:2px solid #595959;
+  }
+
+  .cstm-input
+  {
+    /*height:122px;
+    width:100%;*/
+    font-size:18px;
+    border:2px solid #595959;
+  }
+  
+  ::placeholder
+  {
+    font-size:15px;
+  }
+
+  input[type=radio] 
+  {
+    width:20px;
+    height:20px;
+  }
+
+  select
+  {
+    font-size:18px;
+    height:42px !important;
+    border:2px solid #595959 !important;
+  }
+
+  label
+  {
+    font-size:16px;
+  }
+}
+
+@media only screen and (min-width: 992px) 
+{
+  .bp-nv-img
+  {
+    width:28px;
+    height:28px;
+  }
+
+  .bp-nv-shopping-basket
+  {
+    font-size:30px;
+  }
+
+  .bp-nv-appname
+  {
+    display:inline-block;
+    font-size:20px;
+    margin-top:2px;
+    margin-left:5px;
+  }
+
+  .bp-nv-cartcount
+  {
+    font-size:21px;
+    margin-right:10px;
+  }
+
+  /*.bp-cart
+  {
+    width:45%;
+    margin-left:5%;
+    margin-right:5px;
+  }*/
+
+  /*.bp-checkoutform
+  {
+    margin-right:3%;
+    margin-left:5px;
+    margin-top:0;
+    width:45%;
+  }
+
+  .bp-checkoutform-col
+  {
+    margin-top:0px;
+    margin-left:2%;
+    margin-right:2%;
+    width:46%;
+  }*/
+
+  #home-btn
+  {
+    /*margin-left:4%;*/
+    font-size:16px;
+  }
+
+  .qty-buttons
+  {
+    font-size:16px;
+    padding:4px;
+  }
+
+  #checkout-btn
+  {
+    margin-top:20px;
+    margin-bottom:5px;
+    font-size:22px;
+  }
+
+  h3
+  {
+    font-size:25px;
+  }
+
+  h4
+  {
+    font-size:23px;
+  }
+
+  .cart-list-img
+  {
+    height:150px;
+    width:100%;
+    margin-top:0px;
+  }
+
+  .bp-nml-text
+  {
+    font-size:16px;
+  }
+
+  .input-group .input-group-prepend span
+  {
+    font-size:18px;
+    border:1px solid #595959;
+  }
+
+  .input-group input
+  {
+    height:50px;
+    width:100%;
+    font-size:15px;
+    border:1px solid #595959;
+  }
+
+  .cstm-input
+  {
+    height:50px;
+    width:100%;
+    font-size:15px;
+    border:1px solid #595959;
+  }
+  
+  ::placeholder
+  {
+    font-size:15px;
+  }
+
+  input[type=radio] 
+  {
+    width:18px;
+    height:18px;
+  }
+
+  select
+  {
+    font-size:15px;
+    height:50px !important;
+    border:1px solid #595959 !important;
+  }
+
+  label
+  {
+    font-size:15px;
+  }
+}

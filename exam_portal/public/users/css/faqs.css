@@ -1,0 +1,47 @@
+.faq_panel_col_margin
+{
+	margin-left:3rem;
+	margin-right:3rem;
+}
+
+.wordbreak
+{
+	word-break:break-all;
+}
+
+@media (min-width:100px)
+{
+}
+
+@media (min-width:600px)
+{
+}
+
+
+
+@media (min-width:1280px)
+{
+	.faq_panel_col_margin
+	{
+		margin-left:2rem;
+		margin-right:13rem;
+	}
+}
+
+@media (min-width:1024px)
+{
+	.faq_panel_col_margin
+	{
+		margin-left:2rem;
+		margin-right:18rem;
+	}
+}
+
+@media (min-width: 768px)
+{
+	.faq_panel_col_margin
+	{
+		margin-left:3rem;
+		margin-right:8rem;
+	}
+}

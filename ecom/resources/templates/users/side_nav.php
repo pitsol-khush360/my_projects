@@ -14,6 +14,9 @@
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
+                        <a href="../index.php"><i class="fa fa-fw fa-home"></i> Home</a>
+                    </li>
+                    <li>
                         <a href="index.php?user_profile&name=<?php echo $_SESSION['user_name']; ?>"><i class="fa fa-fw fa-bar-chart-o"></i> User Profile</a>
                     </li>
                     <li>

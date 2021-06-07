@@ -25,7 +25,7 @@ if(isset($_SESSION['user_name']))
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="shop.php?page=1">Shop</a>
+                        <a href="shop.php">Shop</a>
                     </li>
                     <li>
                         <a href="login.php">Login</a>
@@ -33,9 +33,9 @@ if(isset($_SESSION['user_name']))
                     <li>
                         <a href="signup.php">Sign Up</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="admin">Admin</a>
-                    </li>
+                    </li>-->
                      <li>
                         <a href="checkout.php">Checkout</a>
                     </li>
@@ -74,7 +74,7 @@ if(isset($_SESSION['user_name']))
                         <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><p class="text-info text-center" style="font-size:20px;">Hello,<?php echo $_SESSION['user_name']; ?></p>
+                            <li><p class="text-info text-center" style="font-size:20px;">Hello, <?php echo $_SESSION['user_name']; ?></p>
                             </li>
                             <li class="list-group-item list-style-none text-center"><a href="users/index.php?orders&id=<?php echo $userid; ?>">Your Orders</a></li>
                             <li class="list-group-item list-style-none text-center"><a href="users/index.php?user_profile&name=<?php echo $_SESSION['user_name']; ?>">Your Profile</a></li>
@@ -108,7 +108,7 @@ if(isset($_SESSION['user_name']))
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="shop.php?page=1">Shop</a>
+                        <a href="shop.php">Shop</a>
                     </li>
                     <li>
                         <a href="login.php">Login</a>

@@ -1,0 +1,148 @@
+<?php
+
+header("Content-Type:application/json");	// setting content as we will convert data in JSON type.
+include('../../config/config.php');
+require_once("../../config/".ENV."_config.php");
+
+require_once('../validation.php');
+
+$query="";
+
+if(isset($_REQUEST['seller_id']) && $_REQUEST['seller_id']!="")
+{
+	$seller_id=$_REQUEST['seller_id'];
+	$query="SELECT 
+					seller_id,
+					seller_email,
+					beneficiary_id,
+					seller_business_name,
+					kyc_application_status,
+					accept_online_payments,
+					kyc_completed,seller_pannum,
+					created_datetime,
+					seller_alternate_number
+							FROM 
+					seller_details
+							WHERE
+					seller_id='".$seller_id."'";
+}
+else		
+if(isset($_REQUEST['kyc_application_status'])&&$_REQUEST['kyc_application_status']!='')
+{
+	$kyc_application_status=$_REQUEST['kyc_application_status'];
+	$query="SELECT 
+					seller_id,
+					seller_email,
+					beneficiary_id,
+					seller_business_name,
+					kyc_application_status,
+					accept_online_payments,
+					kyc_completed,seller_pannum,
+					created_datetime,
+					seller_alternate_number
+							FROM 
+					seller_details
+							WHERE
+					kyc_application_status='".$kyc_application_status."'";
+}
+else
+if(isset($_REQUEST['accept_online_payments'])&&$_REQUEST['accept_online_payments']!='')
+{
+	$accept_online_payments=$_REQUEST['accept_online_payments'];
+	$query="SELECT 
+					seller_id,
+					seller_email,
+					beneficiary_id,
+					seller_business_name,
+					kyc_application_status,
+					accept_online_payments,
+					kyc_completed,seller_pannum,
+					created_datetime,
+					seller_alternate_number
+							FROM 
+					seller_details
+							WHERE
+					accept_online_payments='".$accept_online_payments."'";
+}
+else
+if(isset($_REQUEST['kyc_completed'])&&$_REQUEST['kyc_completed']!='')
+{
+	$kyc_completed=$_REQUEST['kyc_completed'];
+	$query="SELECT 
+					seller_id,
+					seller_email,
+					beneficiary_id,
+					seller_business_name,
+					kyc_application_status,
+					accept_online_payments,
+					kyc_completed,seller_pannum,
+					created_datetime,
+					seller_alternate_number
+							FROM 
+					seller_details
+							WHERE
+					kyc_completed='".$kyc_completed."'";
+}
+else
+if(isset($_REQUEST['seller_alternate_number'])&&$_REQUEST['seller_alternate_number']!='')
+{
+	$seller_alternate_number=$_REQUEST['seller_alternate_number'];
+	$query="SELECT 
+					seller_id,
+					seller_email,
+					beneficiary_id,
+					seller_business_name,
+					kyc_application_status,
+					accept_online_payments,
+					kyc_completed,seller_pannum,
+					created_datetime,
+					seller_alternate_number
+							FROM 
+					seller_details
+							WHERE
+					seller_alternate_number='".$seller_alternate_number."'";
+}
+else
+{
+	$query="SELECT 
+					seller_id,
+					seller_email,
+					beneficiary_id,
+					seller_business_name,
+					kyc_application_status,
+					accept_online_payments,
+					kyc_completed,seller_pannum,
+					created_datetime,
+					seller_alternate_number
+							FROM 
+					seller_details";
+}
+$query=query($query);
+confirm($query);
+$rows=mysqli_num_rows($query);
+
+if($rows!=0)	// Valid Request, Data Found.
+{
+	$temp=array();
+	while($row=fetch_array($query))
+	{
+		$temp[]=$row;
+	}
+	$temp['response_code']=200;
+	$temp['response_desc']="success";
+	$temp['rows']=$rows;
+	//print_r($temp);
+	echo json_encode(array("getsellerdetails"=>$temp));
+	close();
+	exit();
+}
+else
+{
+	$temp['response_code']=405;
+	$temp['response_desc']="No Records Found";
+	echo json_encode(array("getsellerdetails"=>$temp));
+	close();
+	exit();
+}
+
+?>
